@@ -7,6 +7,7 @@ app.controller("YelpController", function ($scope, YelpService) {
         if(!$scope.yelp.isLoading)
         {
           $scope.yelp.refresh().then(function () {
+
               $scope.$broadcast('scroll.refreshComplete');
           });
         }
@@ -18,6 +19,8 @@ app.controller("YelpController", function ($scope, YelpService) {
         if(!$scope.yelp.isLoading && $scope.yelp.hasMore)
         {
             $scope.yelp.next().then(function () {
+
+
                 $scope.$broadcast('scroll.infiniteScrollComplete');
             });
         }
