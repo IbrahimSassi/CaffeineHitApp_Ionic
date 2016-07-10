@@ -1,5 +1,6 @@
 var app = angular.module('caffeinehit', [
 	'ionic',
+    'ngCordova',
 	'caffeinehit.controllers',
 	'caffeinehit.services',
 	'caffeinehit.filters'
@@ -22,5 +23,5 @@ app.run(function ($ionicPlatform) {
 });
 
 app.config(function ($httpProvider) {
-	$httpProvider.defaults.headers.common['Authorization'] = 'Token <YourTokenFromCodeCraft>';
+	$httpProvider.defaults.headers.common['Authorization'] = 'Token <YourToken>';
 });
